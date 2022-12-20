@@ -5,6 +5,7 @@ import { client } from '../../../lib/sanity.client'
 // components
 import PreviewSuspense from '../../components/PreviewSuspense'
 import PreviewBlogList from '../../components/PreviewBlogList'
+import BlogList from '../../components/BlogList'
 
 const query = groq`
   *[_type=='post'] {
@@ -37,7 +38,7 @@ export default async function HomePage() {
   return (
     <div>
       {/* Blog List */}
-      <h1>not in preview mode</h1>
+      <BlogList posts={posts} />
     </div>
   )
 }
